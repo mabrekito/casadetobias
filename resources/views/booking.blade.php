@@ -36,15 +36,15 @@
             </div>
             <div class="form-group">
                 {{Form::label('roomsQty', 'Number of Room(s)')}}
-                {{Form::select('roomsQty', ['1','2','3','4','5'], '1')}}
+                {{Form::select('roomsQty', ['1','2','3','4','5'])}}
             </div>
             <div class="form-group">
                 {{Form::label('guest', 'Guest(s)')}}
-                {{Form::select('guest', ['1','2','3','4'], '1')}}
+                {{Form::select('guest', ['1','2','3','4'])}}
             </div>
             <div class="form-group">
                 {{Form::label('senior', 'Senior(s)')}}
-                {{Form::select('senior', ['1','2','3','4'], '1')}}
+                {{Form::select('senior', ['0','1','2','3','4'])}}
             </div>
         </div>
         <div class="form-group">
