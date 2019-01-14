@@ -27,6 +27,7 @@ Route::get('/gallery', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::post('/contact/submit', 'MessagesController@submit');
 
 Route::get('/rooms', function () {
     return view('rooms');
@@ -44,10 +45,13 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('/booking', function () {
+    return view('booking');
+});
+
+Route::post('/booking/summary', 'BookingsController@submit');
+
 /* For testing codes */
 Route::get('/test',function(){
     return view('inc.test');
 });
-
-Route::post('/contact/submit', 'MessagesController@submit');
-

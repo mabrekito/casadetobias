@@ -12150,7 +12150,7 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 100;
   display: none;
   float: left;
   min-width: 20rem;
@@ -12343,5 +12343,11 @@ nav {
 .rooms-container {
   width: 100%;
   padding: 50px;
+}
+
+/* Booking form */
+
+#address {
+  height: 5rem;
 }
 
