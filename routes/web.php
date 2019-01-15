@@ -45,12 +45,18 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/booking', function () {
-    return view('booking');
+Route::get('/reservation/booking', function () {
+    return view('/reservation/booking');
 });
-Route::get('/step1', function () {
-    return view('step1');
+
+Route::get('/reservation/step1', function () {
+    return view('/reservation/step1');
 });
+
+Route::get('/reservation/zerostep', function () {
+    return view('/reservation/zerostep');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -58,7 +64,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::post('/booking/summary', 'BookingsController@submit');
+Route::post('/reservation/booking/summary', 'BookingsController@submit');
 
 /* For testing codes */
 Route::get('/test',function(){

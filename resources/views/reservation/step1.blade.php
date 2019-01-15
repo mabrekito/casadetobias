@@ -15,13 +15,32 @@
   }
 </style>
 <div class="main-content">
+
+</div>
+<div class="jumbotron pads">
+	<div class="rootwizard">
+	  <div class="nav-inner">
+	    <div class="container">
+	      <ul class="nav nav-pills nav-fill">
+	        <li class="nav-item"><a class="nav-link" href="/reservation/zerostep">Search</a></li>
+	        <li class="nav-item"><a class="nav-link active" href="/reservation/step1">Select Room</a></li>
+	        <li class="nav-item"><a class="nav-link" href="/reservation/booking">Enter Payment Details</a></li>
+	        <li class="nav-item"><a class="nav-link" href="/reservation/zerostep">Confirmation</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+
+<div class="main-content">
   <div class="container" id="bigkubo">
       <div class="step1">
         <h2>Big Kubo House</h2>
       </div>
     <div class="row">
       <div class="col-lg-6 justify-align-center">
-          <img src="images/bigkuboimg/bigkubo8.jpg" style="width:100%" class="hover-shadow cursor">
+          <img src="/images/bigkuboimg/bigkubo8.jpg" style="width:100%" class="hover-shadow cursor">
       </div>
       <div class="col-lg-6 justify-align-center">
         	<h2>Summary</h2>
@@ -54,7 +73,7 @@
       </div>
     <div class="row">
       <div class="col-lg-6 justify-align-center">
-          <img src="images/smallkuboimg/kubo3.jpg" style="width:100%" class="hover-shadow cursor">
+          <img src="/images/smallkuboimg/kubo3.jpg" style="width:100%" class="hover-shadow cursor">
       </div>
       <div class="col-lg-6 justify-align-center">
         	<h2>Summary</h2>
@@ -88,7 +107,7 @@
       </div>
     <div class="row">
       <div class="col-lg-6 justify-align-center">
-          <img src="images/dormitory/dormitory4.jpg" style="width:100%" class="hover-shadow cursor">
+          <img src="/images/dormitory/dormitory4.jpg" style="width:100%" class="hover-shadow cursor">
       </div>
       <div class="col-lg-6 justify-align-center">
         	<h2>Summary</h2>
@@ -113,10 +132,13 @@
 		</div>
   </div>
 </div>
-<div class="container">
-  <div align="right">
-    <a href="/booknow" class="btn btn-success">BOOK NOW</a>
-  </div>
+<div class="main-content">
+	<div class="container">
+	  <div align="right">
+	    <a href="/reservation/booking" class="btn btn-success">Next</a>
+	  </div>
+	</div>
 </div>
+
 
 @endsection

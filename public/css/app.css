@@ -12351,3 +12351,12 @@ nav {
   height: 5rem;
 }
 
+.marge {
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.pads {
+  padding: 15px;
+}
+

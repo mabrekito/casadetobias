@@ -5,6 +5,24 @@
 @endsection
 
 @section('content')
+
+<div class="main-content">
+
+</div>
+<div class="jumbotron pads">
+	<div class="rootwizard">
+	  <div class="nav-inner">
+	    <div class="container">
+	      <ul class="nav nav-pills nav-fill">
+	        <li class="nav-item"><a class="nav-link" href="/reservation/zerostep">Search</a></li>
+	        <li class="nav-item"><a class="nav-link" href="/reservation/step1">Select Room</a></li>
+	        <li class="nav-item"><a class="nav-link active" href="/reservation/booking">Enter Payment Details</a></li>
+	        <li class="nav-item"><a class="nav-link" href="/reservation/zerostep">Confirmation</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+</div>
     <div class="container mt-4">
         @include('inc.messages')
         {!! Form::open(['url' => 'booking/summary']) !!}
