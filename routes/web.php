@@ -48,6 +48,15 @@ Route::get('/admin', function () {
 Route::get('/booking', function () {
     return view('booking');
 });
+Route::get('/step1', function () {
+    return view('step1');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
+});
 
 Route::post('/booking/summary', 'BookingsController@submit');
 
