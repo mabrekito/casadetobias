@@ -2,8 +2,8 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <div class="container">
         <a class="navbar-brand py-0" href="/">
-            <img class="logo d-none" src="images/logo.jpg" alt="Casa De Tobias" height="43">
-            <img class="mini-logo" src="images/mini-logo.jpg" alt="Casa De Tobias" height="43">
+            <img class="logo d-none" src="/images/logo.jpg" alt="Casa De Tobias" height="43">
+            <img class="mini-logo" src="/images/mini-logo.jpg" alt="Casa De Tobias" height="43">
         </a>
         <div class="btn-group dropdown dropdown-booking-show ml-auto order-md-3">
             <a class="btn btn-secondary main-button rounded d-lg-inline" href="#" data-toggle="dropdown">BOOK A ROOM</a>

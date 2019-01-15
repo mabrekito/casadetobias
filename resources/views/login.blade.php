@@ -32,7 +32,7 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <div class="login-logo">
-      <a href="/login"><img src="images/mini-logo.jpg" width="30%"></a>
+      <a href="/login"><img src="images/casaslogo.jpg" width="70%" style="padding:0"></a>
     </div>
     <p class="login-box-msg">Sign in to start your session</p>
 
