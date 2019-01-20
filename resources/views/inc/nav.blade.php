@@ -17,7 +17,7 @@
                     </div>
                     <!-- date selector -->
                     <div class="date-selector d-flex flex-row mb-3">
-                        <div class="date-selector-input" data-toggle="datepicker-inline" data-target="datepickerFrom1">
+                        <div class="date-selector-input" data-toggle="datepicker-inline" data-target="datepickerFrom1" id="testing">
                             <div class="date-label">Check In</div>
                             <div class="date-placeholder"></div>
                             <div class="date-values" id="dateFrom1">

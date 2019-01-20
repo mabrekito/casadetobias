@@ -8,15 +8,12 @@ var bookingCloseBtn = document.getElementById('bookingCloseBtn');
 var bookingDropdownMenu= document.getElementsByClassName('dropdown-menu')[0];
 var dateSelectorFrom = document.getElementsByClassName('date-selector-input')[0];
 var dateSelectorTo = document.getElementsByClassName('date-selector-input')[1];
-var calendarFrom = document.getElementsByClassName('date-values')[0];
+var calendar = document.getElementsByClassName('dropdown-booking-calendar')[0];
 var x = document.getElementById("datepickerFrom1");
 var y = document.getElementById("datepickerTo1");
 Date.shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 let HomeButton = document.getElementsByClassName("btn btn-primary btn-block");
-var checkin = undefined;
-var checkout = null;
-var date = undefined;
-
+let datePickerOn = 0;
 
 //Click event
 mainBookingBtn.addEventListener('click', openModal);
@@ -32,13 +29,14 @@ window.addEventListener('click', clickOutside);
 
 function openModal(){
     overlay.style.display='block';
-    bookingDropdownMenu.style.display='block';
+    bookingDropdownMenu.style.display='flex';
 }
 
 //Function close booking
 function closeModal(){
     overlay.style.display='none';
     bookingDropdownMenu.style.display='none';
+    calendar.style.display='none';
     $( "#datepickerFrom1" ).datepicker( "destroy" );
     $( "#datepickerTo1" ).datepicker( "destroy" );
 
@@ -47,72 +45,96 @@ function closeModal(){
 function clickOutside(e){
     if (e.target == overlay){
         overlay.style.display='none';
+        calendar.style.display='none';
         bookingDropdownMenu.style.display='none';
         $( "#datepickerFrom1" ).datepicker( "destroy" );
         $( "#datepickerTo1" ).datepicker( "destroy" );
     }
 }
 function dateSelectFrom() {
-
-    $( "#datepickerTo1" ).datepicker( "destroy" );
-    $(function calendar() {
-        $( "#datepickerFrom1" ).datepicker({
-            minDate:0,
-            formatDate: 'd M, yy',
-        });
-        $("#datepickerFrom1 ").on("change",function calendar(){
-
-            var date = $(this).datepicker('getDate'),
-                day  = date.getDate(),
-                month = Date.shortMonths[date.getMonth()],
-                year =  date.getFullYear();
-            document.getElementsByClassName('date-d')[0].innerHTML = day.toString();
-            document.getElementsByClassName('date-m')[0].innerHTML = month.toString();
-            document.getElementsByClassName('date-y')[0].innerHTML = year.toString();
-            $( "#datepickerFrom1" ).datepicker( "destroy" );
-            $( "#datepickerTo1" ).datepicker( "destroy" );
-            y.style.display='block';
-            checkin = date;
-
-            $(function () {
-                $( "#datepickerTo1" ).datepicker({
-                    minDate: date,
-                    formatDate: 'd M, yy',
-                });
-                $("#datepickerTo1 ").on("change",function calendar(){
-                     date = $(this).datepicker('getDate'),
+    $( "#datepickerFrom1" ).datepicker( "destroy" );
+    calendar.style.display='block';
+    x.style.display='block';
+    $( function() {
+        y.style.display ='none';
+        var dateFormat = "mm/dd/yy",
+            from = $( "#datepickerFrom1" )
+                .datepicker({
+                    minDate: 0,
+                    changeMonth: true,
+                })
+                .on( "change", function() {
+                    to.datepicker( "option", "minDate", getDate( this ) );
+                    y.style.display ='block';
+                    x.style.display ='none';
+                    var date = $(this).datepicker('getDate'),
+                        day  = date.getDate(),
+                        month = Date.shortMonths[date.getMonth()],
+                        year =  date.getFullYear();
+                    document.getElementsByClassName('date-d')[0].innerHTML = day.toString();
+                    document.getElementsByClassName('date-m')[0].innerHTML = month.toString();
+                    document.getElementsByClassName('date-y')[0].innerHTML = year.toString();
+                    datePickerOn = 1;
+                }),
+            to = $( "#datepickerTo1" ).datepicker({
+                changeMonth: true,
+            })
+                .on( "change", function() {
+                    from.datepicker( "option", getDate( this ) );
+                    y.style.display ='none';
+                    calendar.style.display='none';
+                    var date = $(this).datepicker('getDate'),
                         day  = date.getDate(),
                         month = Date.shortMonths[date.getMonth()],
                         year =  date.getFullYear();
                     document.getElementsByClassName('date-d')[1].innerHTML = day.toString();
                     document.getElementsByClassName('date-m')[1].innerHTML = month.toString();
                     document.getElementsByClassName('date-y')[1].innerHTML = year.toString();
-                    checkout = new Date(date);
-                    $( "#datepickerTo1" ).datepicker( "destroy" );
-                    $( "#datepickerFrom1" ).datepicker( "destroy" );
                 });
-            });
-        });
-    });
+
+        function getDate( element ) {
+            var date;
+            try {
+                date = $.datepicker.parseDate( dateFormat, element.value );
+            } catch( error ) {
+                date = null;
+            }
+
+            return date;
+        }
+    } );
 }
 function dateSelectTo() {
-    y.style.display='block';
-    $(function () {
+    if (datePickerOn === 1) {
+        x.style.display='none';
+        calendar.style.display='block';
+        y.style.display='block';
+    }
+    else {
+        $( "#datepickerFrom1" ).datepicker( "destroy" );
+        $( "#datepickerTo1" ).datepicker( "destroy" );
+        calendar.style.display='block';
+        y.style.display='block';
         $( "#datepickerTo1" ).datepicker({
-            formatDate: 'd M, yy',
-        });
-        $("#datepickerTo1 ").on("change",function(){
-            var date = $(this).datepicker('getDate'),
-                day  = date.getDate(),
-                month = Date.shortMonths[date.getMonth()],
-                year =  date.getFullYear();
-            document.getElementsByClassName('date-d')[1].innerHTML = day.toString();
-            document.getElementsByClassName('date-m')[1].innerHTML = month.toString();
-            document.getElementsByClassName('date-y')[1].innerHTML = year.toString();
+            changeMonth: true,
+            minDate: +1,
+        })
+            .on( "change", function() {
+                y.style.display ='none';
+                calendar.style.display='none';
+                var date = $(this).datepicker('getDate'),
+                    day  = date.getDate(),
+                    month = Date.shortMonths[date.getMonth()],
+                    year =  date.getFullYear();
+                document.getElementsByClassName('date-d')[1].innerHTML = day.toString();
+                document.getElementsByClassName('date-m')[1].innerHTML = month.toString();
+                document.getElementsByClassName('date-y')[1].innerHTML = year.toString();
+            });
 
-        });
-    });
+    }
+
 }
+
 
 
 

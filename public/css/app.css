@@ -12176,24 +12176,6 @@ nav {
   color: deeppink;
 }
 
-@media screen and (min-width: 992px) {
-  main .dropdown-booking .dropdown-menu-booking {
-    display: flex;
-    display: -ms-flexbox;
-    flex-direction: row-reverse;
-    padding-top: 0;
-    padding-bottom: 1rem;
-  }
-}
-
-.ui-datepicker-inline {
-  display: flex;
-  display: -ms-flexbox;
-  flex-direction: row-reverse;
-  padding-top: 0;
-  padding-bottom: 1rem;
-}
-
 .overlay {
   display: none;
   position: fixed;
@@ -12279,16 +12261,6 @@ nav {
 }
 */
 
-.ui-datepicker {
-  width: auto;
-  margin-top: 10px;
-}
-
-.ui-widget.ui-widget-content {
-  border: none;
-  padding-bottom: 0;
-}
-
 /*
 @media (min-width: 992px) {
 	.btn-primary.btn-block {
@@ -12358,5 +12330,30 @@ nav {
 
 .pads {
   padding: 15px;
+}
+
+.dropdown-menu.dropdown-menu-booking.dropdown-menu-right.show {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.dropdown-menu.dropdown-menu-booking.dropdown-menu-right {
+  flex-direction: row-reverse;
+}
+
+#dropdownBooking {
+  flex: 50%;
+  min-width: 260px;
+}
+
+.dropdown-booking-calendar {
+  flex: 50%;
+  display: none;
+}
+
+.ui-widget.ui-widget-content {
+  border: none;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
