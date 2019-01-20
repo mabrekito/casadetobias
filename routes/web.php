@@ -67,6 +67,15 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('/roomadmin', function () {
+    return view('roomadmin');
+});
+Route::get('/reports', function () {
+    return view('reports');
+});
+Route::get('/useracc', function () {
+    return view('useracc');
+});
 
 Route::post('/reservation/booking/summary', 'BookingsController@submit');
 

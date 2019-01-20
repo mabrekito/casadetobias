@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin Log-in</title>
+    <title>User Account</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -145,269 +145,146 @@
         <section class="content-header">
             <h1>
                 Dashboard
-                <small>Control panel</small>
+                <small>Room panel</small>
             </h1>
-            <div class="panel-body">
-                            <div class="panel-group" id="accordion">
+            <div class="row">
+                  <div class="col-md-12">
+                      <!-- Advanced Tables -->
+                      <div class="panel panel-default">
+                          <div class="panel-body">
+                              <div class="table-responsive">
+                                  <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                      <thead>
+                                          <tr>
+                                              <th>User ID</th>
+                                              <th>First name</th>
+                                              <th>Last name</th>
+  											<th>User name</th>
+  											<th>User Type</th>
+  											<th>Action</th>
 
-                            <div class="panel panel-primary">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
-                                            <button class="btn btn-default" type="button">
-                                                 Pending  <span class="badge"></span>
-                                            </button>
-                                            </a>
-                                        </h4>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
 
-                                    </div>
+                              <div class="panel-body">
 
-                                    <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
-                                        <div class="panel-body">
-                                           <div class="panel panel-default">
+                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                              <h4 class="modal-title" id="myModalLabel">Change the User name and Password</h4>
+                                          </div>
+                                          <form method="post">
+                                          <div class="modal-body">
 
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <div class="input-group input-group-sm pull-right" style="width: 30%;">
-                                <input type="text" class="form-control" id="srchname1">
-                                    <span class="input-group-btn">
-                                      <button type="button" class="btn btn-info btn-flat" id="srchname"><i class="fa fa-fw fa-search"></i></button>
-                                    </span>
-                                    <span class="input-group-btn">
-                                      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-                                    </span>
-                              </div><br><br><br>
-                                <table class="table" id="tblreserve" style="font-size: 12px;">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>img</th>
-                                            <th>Room Type</th>
-                                            <th>Rooms</th>
-                                            <th>Guest</th>
-                                            <th>Payment Type</th>
-                                            <th>Check In</th>
-                                            <th>Check Out</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                              <div class="form-group">
+                                              <label>Change First name</label>
+                                              <input name="fname" value="" class="form-control" placeholder="Enter First name">
+                                              <input type="hidden" name="id" value="" class="form-control" placeholder="Enter First name">
+                                              </div>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                              <div class="form-group">
+                                              <label>Change Last name</label>
+                                              <input name="lname" value="" class="form-control" placeholder="Enter Last name">
+                                              </div>
 
+                                              <div class="form-group">
+                                              <label>Change User name</label>
+                                              <input name="usname" value="" class="form-control" placeholder="Enter User name">
+                                              </div>
 
-                                    </tbody>
-                                </table>
+                                              <div class="form-group">
+                                              <label>Change Password</label>
+                                              <input type="password" name="pasd" value="" class="form-control" placeholder="Enter Password">
+                                              </div>
 
+                                              <div class="form-group">
+                                              <label>User Type</label>
+                                              <select name="usrtp" class="form-control">
+                                                  <option disabled></option>
+                                                  <option value="1" >Administrator</option>
+                                                  <option value="2" >Employee</option>
+                                              </select>
+                                              </div>
+                                          </div>
 
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
+                                             <input type="submit" name="up" value="Update" class="btn btn-primary">
+                                            </form>
 
-                            </div>
-                        </div>
-                    </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                                      </tbody>
+                                  </table>
+                              </div>
 
-                    <!-- newpanel -->
+                          </div>
+                      </div>
+                      <!--End Advanced Tables -->
+  					<div class="panel-body">
+                              <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal">
+  															Add Account
+  													</button>
+                              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                              <h4 class="modal-title" id="myModalLabel">Add the User name and Password</h4>
+                                          </div>
+  										<form method="post">
+                                          <div class="modal-body">
+                                              <div class="form-group">
+                                              <label>First Name</label>
+                                              <input name="newfname"  class="form-control" placeholder="Enter First Name">
+                                              </div>
+                                              <div class="form-group">
+                                              <label>Last Name</label>
+                                              <input name="newlname"  class="form-control" placeholder="Enter Last Name">
+                                              </div>
+                                              <div class="form-group">
+                                              <label>Add new User name</label>
+                                              <input name="newus"  class="form-control" placeholder="Enter User name">
+  											</div>
+                                              <div class="form-group">
+                                              <label>New Password</label>
+                                              <input type="password" name="newps"  class="form-control" placeholder="Enter Password">
+  											</div>
+                                              <div class="form-group">
+                                              <label>User Type</label>
+                                              <select name="newut" class="form-control">
+                                                  <option disabled></option>
+                                                  <option value="1">Administrator</option>
+                                                  <option value="2">Employee</option>
+                                              </select>
+                                              </div>
+                                          </div>
 
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                        <!-- end of new panel -->
+                                             <input type="submit" name="in" value="Add" class="btn btn-primary">
+  										  </form>
 
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                  </div>
+              </div>
 
-                      <!-- End  Basic Table  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-info">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
-            <button class="btn btn-primary" type="button">
-                 Expected Guest  <span class="badge">0</span>
-            </button>
-
-            </a>
-        </h4>
-
-
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
-        <div class="panel-body">
-
-        <div class="panel-body">
-<div class="table-responsive">
-<div class="input-group input-group-sm pull-right" style="width: 30%;">
-<input type="text" class="form-control" id="srchchkin1">
-    <span class="input-group-btn">
-      <button type="button" class="btn btn-info btn-flat" id="srchchkin"><i class="fa fa-fw fa-search"></i></button>
-    </span>
-    <span class="input-group-btn">
-      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-    </span>
-</div><br><br><br>
-<table class="table" id="tblexpected" style="font-size: 12px;">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>img</th>
-            <th>Room Type</th>
-            <th>Rooms</th>
-            <th>Guest</th>
-            <th>Payment Type</th>
-            <th>Check In</th>
-            <th>Check Out</th>
-            <th>Status</th>
-            <th>Action</th>
-
-        </tr>
-    </thead>
-    <tbody>
-
-
-    </tbody>
-</table>
-</div>
-</div>
-
-
-
-
-        </div>
-
-
-
-    </div>
-
-</div>
-                                                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
-                                            <button class="btn btn-primary" type="button">
-                                                 Check-In  <span class="badge">0</span>
-                                            </button>
-
-                                            </a>
-                                        </h4>
-
-
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
-                                        <div class="panel-body">
-
-                                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <div class="input-group input-group-sm pull-right" style="width: 30%;">
-                                <input type="text" class="form-control" id="srchchkin1">
-                                    <span class="input-group-btn">
-                                      <button type="button" class="btn btn-info btn-flat" id="srchchkin"><i class="fa fa-fw fa-search"></i></button>
-                                    </span>
-                                    <span class="input-group-btn">
-                                      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-                                    </span>
-                              </div><br><br><br>
-                                <table class="table" id="tblcheckin" style="font-size: 12px;">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>img</th>
-                                            <th>Room Type</th>
-                                            <th>Rooms</th>
-                                            <th>Guest</th>
-                                            <th>Payment Type</th>
-                                            <th>Check In</th>
-                                            <th>Check Out</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-  <div class="panel panel-danger">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
-            <button class="btn btn-primary" type="button">
-                 Check-Out  <span class="badge">0</span>
-            </button>
-
-            </a>
-        </h4>
-
-
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse in" style="height: auto;">
-        <div class="panel-body">
-
-        <div class="panel-body">
-<div class="table-responsive">
-<div class="input-group input-group-sm pull-right" style="width: 30%;">
-<input type="text" class="form-control" id="srchchkout">
-    <span class="input-group-btn">
-      <button type="button" class="btn btn-info btn-flat" id="srchcheckout1"><i class="fa fa-fw fa-search"></i></button>
-    </span>
-    <span class="input-group-btn">
-      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-    </span>
-</div><br><br><br>
-<table class="table" id="tblcheckout" style="font-size: 12px;">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>img</th>
-            <th>Room Type</th>
-            <th>Rooms</th>
-            <th>Guest</th>
-            <th>Payment Type</th>
-            <th>Check In</th>
-            <th>Check Out</th>
-            <th>Status</th>
-            <th>Action</th>
-
-        </tr>
-    </thead>
-    <tbody>
-
-
-    </tbody>
-</table>
-</div>
-</div>
-
-
-
-
-        </div>
-
-
-
-    </div>
-
-</div>
-  </section>
+  			 <!-- /. PAGE INNER  -->
+              </div>
+           <!-- /. PAGE WRAPPER  -->
+          </div>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

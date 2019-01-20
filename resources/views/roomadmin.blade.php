@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin Log-in</title>
+    <title>Rooms</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -145,269 +145,116 @@
         <section class="content-header">
             <h1>
                 Dashboard
-                <small>Control panel</small>
+                <small>Room panel</small>
             </h1>
-            <div class="panel-body">
-                            <div class="panel-group" id="accordion">
+            <div class="row">
+             <div class="col-md-12">
+                 <div class="panel panel-default">
+                     <div class="panel-heading">
 
-                            <div class="panel panel-primary">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
-                                            <button class="btn btn-default" type="button">
-                                                 Pending  <span class="badge"></span>
-                                            </button>
-                                            </a>
-                                        </h4>
+                     </div>
+                     <div class="panel-body">
+                         <div class="panel-group" id="accordion">
 
-                                    </div>
+                         <div class="panel panel-primary">
+                                 <div class="panel-heading">
+                                     <h4 class="panel-title">
 
-                                    <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
-                                        <div class="panel-body">
-                                           <div class="panel panel-default">
+                                          <button class="btn btn-default" type="button">
+                                              Rooms  <span class="badge"></span>
+                                         </button>
+                                         <button type="button" style="float: right;" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+             Add
+           </button>
 
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <div class="input-group input-group-sm pull-right" style="width: 30%;">
-                                <input type="text" class="form-control" id="srchname1">
-                                    <span class="input-group-btn">
-                                      <button type="button" class="btn btn-info btn-flat" id="srchname"><i class="fa fa-fw fa-search"></i></button>
-                                    </span>
-                                    <span class="input-group-btn">
-                                      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-                                    </span>
-                              </div><br><br><br>
-                                <table class="table" id="tblreserve" style="font-size: 12px;">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>img</th>
-                                            <th>Room Type</th>
-                                            <th>Rooms</th>
-                                            <th>Guest</th>
-                                            <th>Payment Type</th>
-                                            <th>Check In</th>
-                                            <th>Check Out</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                     </h4>
+                                 </div>
+                                 <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
+                                     <div class="panel-body">
+                                        <div class="panel panel-default">
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                     <div class="panel-body">
 
+                         <div class="table-responsive">
+                             <table class="table" style="font-size: 12px;">
+                                 <thead>
+                                     <tr>
+                                         <th>#</th>
+                                         <th>Room Type</th>
+                                         <th>Room Price</th>
+                                         <th>Room Capacity</th>
+                                         <th>Room Available</th>
+                                         <th>Additional</th>
+                                         <th>Description</th>
+                                         <th>Room Image</th>
+                                         <th>Action</th>
 
-                                    </tbody>
-                                </table>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
 
 
 
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- newpanel -->
-
-
-                        <!-- end of new panel -->
-
-
-                      <!-- End  Basic Table  -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-info">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
-            <button class="btn btn-primary" type="button">
-                 Expected Guest  <span class="badge">0</span>
-            </button>
-
-            </a>
-        </h4>
-
-
+        </section>
     </div>
-    <div id="collapseFour" class="panel-collapse collapse" style="height: 0px;">
-        <div class="panel-body">
-
-        <div class="panel-body">
-<div class="table-responsive">
-<div class="input-group input-group-sm pull-right" style="width: 30%;">
-<input type="text" class="form-control" id="srchchkin1">
-    <span class="input-group-btn">
-      <button type="button" class="btn btn-info btn-flat" id="srchchkin"><i class="fa fa-fw fa-search"></i></button>
-    </span>
-    <span class="input-group-btn">
-      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-    </span>
-</div><br><br><br>
-<table class="table" id="tblexpected" style="font-size: 12px;">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>img</th>
-            <th>Room Type</th>
-            <th>Rooms</th>
-            <th>Guest</th>
-            <th>Payment Type</th>
-            <th>Check In</th>
-            <th>Check Out</th>
-            <th>Status</th>
-            <th>Action</th>
-
-        </tr>
-    </thead>
-    <tbody>
+    <!-- ADD MODAL HERE -->
 
 
-    </tbody>
-</table>
-</div>
-</div>
+        <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Room</h4>
+              </div>
+              <div class="modal-body">
+                <form method="POST">
+                <div class="form-group label-floating">
+                <label class="control-label">Room Type</label>
+                <input type="text" name="roomtype" class="form-control" placeholder="Room Type">
+                </div>
 
+                <div class="form-group label-floating">
+                <label class="control-label">Room Price</label>
+                <input type="text" name="roomprice" class="form-control" placeholder="Room Price">
+                </div>
 
+                <div class="form-group label-floating">
+                <label class="control-label">Room Capacity</label>
+                <input type="text" name="roomcapacity" class="form-control" placeholder="Room Capacity">
+                </div>
 
+                <div class="form-group label-floating">
+                <label class="control-label">Room Available</label>
+                <input type="text" name="roomavailable" class="form-control" placeholder="Room Available">
+                </div>
 
+                <div class="form-group label-floating">
+                <label class="control-label">Additional</label>
+                <input type="text" name="additional" class="form-control" placeholder="Additional">
+                </div>
+
+                <div class="form-group label-floating">
+                <label class="control-label">Decription</label>
+                <textarea name="description" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group label-floating">
+                <label class="control-label">Room Image</label>
+                <input type="text" name="roomimg" class="form-control" placeholder="Room Image">
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" name="roominsert" class="btn btn-primary">Add</button>
+              </div>
+            </div>
+            </form>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
         </div>
-
-
-
-    </div>
-
-</div>
-                                                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
-                                            <button class="btn btn-primary" type="button">
-                                                 Check-In  <span class="badge">0</span>
-                                            </button>
-
-                                            </a>
-                                        </h4>
-
-
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
-                                        <div class="panel-body">
-
-                                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <div class="input-group input-group-sm pull-right" style="width: 30%;">
-                                <input type="text" class="form-control" id="srchchkin1">
-                                    <span class="input-group-btn">
-                                      <button type="button" class="btn btn-info btn-flat" id="srchchkin"><i class="fa fa-fw fa-search"></i></button>
-                                    </span>
-                                    <span class="input-group-btn">
-                                      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-                                    </span>
-                              </div><br><br><br>
-                                <table class="table" id="tblcheckin" style="font-size: 12px;">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>img</th>
-                                            <th>Room Type</th>
-                                            <th>Rooms</th>
-                                            <th>Guest</th>
-                                            <th>Payment Type</th>
-                                            <th>Check In</th>
-                                            <th>Check Out</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                </div>
-  <div class="panel panel-danger">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
-            <button class="btn btn-primary" type="button">
-                 Check-Out  <span class="badge">0</span>
-            </button>
-
-            </a>
-        </h4>
-
-
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse in" style="height: auto;">
-        <div class="panel-body">
-
-        <div class="panel-body">
-<div class="table-responsive">
-<div class="input-group input-group-sm pull-right" style="width: 30%;">
-<input type="text" class="form-control" id="srchchkout">
-    <span class="input-group-btn">
-      <button type="button" class="btn btn-info btn-flat" id="srchcheckout1"><i class="fa fa-fw fa-search"></i></button>
-    </span>
-    <span class="input-group-btn">
-      <a href="/admin" class="btn btn-info btn-flat"><i class="fa fa-fw fa-refresh"></i></a>
-    </span>
-</div><br><br><br>
-<table class="table" id="tblcheckout" style="font-size: 12px;">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>img</th>
-            <th>Room Type</th>
-            <th>Rooms</th>
-            <th>Guest</th>
-            <th>Payment Type</th>
-            <th>Check In</th>
-            <th>Check Out</th>
-            <th>Status</th>
-            <th>Action</th>
-
-        </tr>
-    </thead>
-    <tbody>
-
-
-    </tbody>
-</table>
-</div>
-</div>
-
-
-
-
-        </div>
-
-
-
-    </div>
-
-</div>
-  </section>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
