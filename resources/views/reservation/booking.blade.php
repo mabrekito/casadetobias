@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
 
 @section('title')
     Gallery of Photos of Casa De Tobias Mountain Resort - Contact Us
