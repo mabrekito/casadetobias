@@ -57,6 +57,10 @@ Route::get('/reservation/zerostep', function () {
     return view('/reservation/zerostep');
 });
 
+Route::get('/invoice', function () {
+    return view('invoice');
+});
+
 Route::get('/login', function () {
     return view('login');
 });

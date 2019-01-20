@@ -9,6 +9,10 @@
 
 	</head>
 	<body>
+		@if(Request::is('/reservation/invoice'))
+		@include('reservation.invoice')
+		@else
+
 		<!--navigation-->
 		<header>@include('inc.nav')</header>
 
@@ -29,5 +33,6 @@
 		<div class="overlay" id="modal"></div><script>
 		</script>
 		@include('inc.jscripts')
+		@endif
 	</body>
 </html>
