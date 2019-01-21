@@ -8,12 +8,10 @@ class Message extends Model
 {
     public function Submit(Request $request){
         $this->validate($request, [
-            'email' => 'required',
             'firstName' => 'required',
             'lastName' => 'required',
             'phoneNumber' => 'required',
         ]);
-
         // Create New Message
         $booking = new Message;
         $booking ->email = $request->input('name');

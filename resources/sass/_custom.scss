@@ -160,10 +160,6 @@ box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.56);
     content: "";
     display: table;
 }
-.dropdown-booking-close:after, .dropdown-booking-close:before {
-    content: "";
-    display: table;
-}
 
 .dropdown-booking-close:after {
     clear: both;
@@ -260,9 +256,8 @@ box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.56);
 	background-color: #f3f3f3;
 }
 .gallery-intro .jumbotron{
-	padding: 100px 60px;
+	padding: 15px 15px;
 	margin: 0px;
-	background-image: url(/images/bgGallery2.jpg);
 	background-position:center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -312,3 +307,128 @@ box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.56);
   margin-right: 10px;
   margin-top: 10px;
 }
+
+// **************************** Gallery *******************
+ .main-content {
+   padding: 10px;
+   margin-top: 30px;
+ }
+
+.row {
+  padding: 0 8px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close-modal {
+  color: white;
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-modal:hover, .close-modal:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 5rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+a:not([href]):not([tabindex]) {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/*
+.prev:hover, .next:hover {
+border: none;
+background-color: rgba(0, 0, 0, 0.8);
+}
+*/
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-modal.cursor:after,{
+  content: "";
+  display: table;
+}
+//****************************End Gallery *******************

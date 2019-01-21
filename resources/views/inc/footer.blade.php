@@ -1,6 +1,4 @@
-<div class="main-content">
 
-</div>
 <div class="container">
 	<div class="homepage globalpage_new page"></div>
 	<div class="row">
