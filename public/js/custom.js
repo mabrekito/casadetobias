@@ -16,24 +16,24 @@ let HomeButton = document.getElementsByClassName("btn btn-primary btn-block");
 let datePickerOn = 0;
 
 //Click event
-mainBookingBtn.addEventListener('click', openModal);
+mainBookingBtn.addEventListener('click', overlayModal);
 dateSelectorFrom.addEventListener('click', dateSelectFrom);
 dateSelectorTo.addEventListener('click', dateSelectTo);
 
 //Close click event
-bookingCloseBtn.addEventListener('click', closeModal);
+bookingCloseBtn.addEventListener('click', overlayClose);
 //Outside click event
 window.addEventListener('click', clickOutside);
 
 //Function open booking
 
-function openModal(){
+function overlayModal(){
     overlay.style.display='block';
     bookingDropdownMenu.style.display='flex';
 }
 
 //Function close booking
-function closeModal(){
+function overlayClose(){
     overlay.style.display='none';
     bookingDropdownMenu.style.display='none';
     calendar.style.display='none';
@@ -135,7 +135,41 @@ function dateSelectTo() {
 
 }
 
+/**modal **/
 
+function openModal() {
+    document.getElementById('myModal').style.display = "block";
+}
 
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+}
 
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+}

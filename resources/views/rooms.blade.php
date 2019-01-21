@@ -21,7 +21,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 col-md-6">
+					<div class="col-lg-4 col-md-12">
 						<h2>Clubhouse Dormitory</h2>
 
 						<div class="card" style="width:300px">
@@ -33,7 +33,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6">
+					<div class="col-lg-4 col-md-12">
 						<h2>Small Kubo</h2>
 
 						<div class="card" style="width:300px">
@@ -45,7 +45,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6">
+					<div class="col-lg-4 col-md-12">
 						<h2>Big Kubo House</h2>
 
 						<div class="card" style="width:300px">
