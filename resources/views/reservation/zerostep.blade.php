@@ -27,7 +27,7 @@
 <div class="container">
   <form class="jumbotron marge" method="POST/GET" action="/reservation/step1">
   		              	<div class="row">
-  		                <div class="col-md-3">
+  		                <div class="col-md-4">
   		                  <div class="form-group">
   		                    <label for="date">Check-in:</label>
   		                    <div class="form-field">
@@ -36,7 +36,7 @@
   		                    </div>
   		                  </div>
   		                </div>
-  		                <div class="col-md-3">
+  		                <div class="col-md-4">
   		                  <div class="form-group">
   		                    <label for="date">Check-out:</label>
   		                    <div class="form-field">
@@ -45,39 +45,7 @@
   		                    </div>
   		                  </div>
   		                </div>
-  		                <div class="col-md-2">
-  		                  <div class="form-group">
-  		                    <label for="adults">Adults</label>
-  		                    <div class="form-field">
-  		                      <i class="icon icon-arrow-down3"></i>
-  		                      <select name="adult" id="adult" class="form-control">
-                              <option value="0" selected>0</option>
-  		                        <option value="1">1</option>
-  		                        <option value="2">2</option>
-  		                        <option value="3">3</option>
-  		                        <option value="4">4</option>
-  		                        <option value="5">5+</option>
-  		                      </select>
-  		                    </div>
-  		                  </div>
-  		                </div>
-  		                <div class="col-md-2">
-  		                  <div class="form-group">
-  		                    <label for="children">Children</label>
-  		                    <div class="form-field">
-  		                      <i class="icon icon-arrow-down3"></i>
-  													<select name="children" id="children" class="form-control">
-                              <option value="0" selected>0</option>
-  		                        <option value="1">1</option>
-  		                        <option value="2">2</option>
-  		                        <option value="3">3</option>
-  		                        <option value="4">4</option>
-  		                        <option value="5">5+</option>
-  		                      </select>
-  		                    </div>
-  		                  </div>
-  		                </div>
-                      <div class="col-md-2 marge">
+                      <div class="col-md-4 marge">
                         <input type="submit" href="/reservation/step1" value="Check Availability" class="btn btn-primary btn-block">
                       </div>
   		              </div>

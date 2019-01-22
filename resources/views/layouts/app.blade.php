@@ -20,7 +20,7 @@
 		<main class="main-content">
 		@if(Request::is('/'))
 		@include('inc.banner')
-		@include('inc.jumbotron')
+		<!-- @include('inc.jumbotron') -->
 		@endif
 		@yield('content')
 		@yield('inc.test')
