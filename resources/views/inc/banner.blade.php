@@ -12,13 +12,13 @@
           <div class="carousel-caption">
             <h1 class="display-1">Casa De Tobias</h1>
             <h3>Thesis Website Layout</h3>
-            <button type="button" class="btn btn-secondary btn-lg">THE RESORT
+            <a href="/about"><button type="button" class="btn btn-secondary btn-lg">THE RESORT</a>
             </button>
-            <button type="button" class="btn btn-primary btn-lg">BOOK A ROOM</button>
+            <a href="/reservation/zerostep"><button type="button" class="btn btn-primary btn-lg">BOOK A ROOM</button></a>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="images/casa2.jpg">
+          <img src="images/casa2.1.jpg">
         </div>
         <div class="carousel-item">
           <img src="images/casabanner3.jpg">
@@ -31,33 +31,44 @@
 <section class="main-container">
   <article class="index-intro">
     <div class="container">
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col-sm-8 test">
-            <h1>This is a TEST of Casa de Tobias</h1>
-            <img src="images/casa4.jpg" class="d-lg-none" width="300" height="150" alt="Casa de Tobias">.
-
-          </div>
-          <div class="col-sm-4">
-            <p>Bootstrap for beginners is a how to series that teaches Bootstrap to people who are just starting out
-              learning programming. The course teaches how Bootstrap can be made easy and teaches how to build
-              responsive web designs and much more. Creating responsive websites with Bootstrap is easy and should not
-              be seen as otherwise, which is why we want to explain the language in a easy to understand way for beginners.
-            </p>
-          </div>
-        </div>
+      <div class="about-intro">
+      	<div class="jumbotron">
+					<div class="row">
+	          <div class="col-sm-2 col-md-6 col-lg-6 coltest">
+	            <h1>Casa de Tobias</h1>
+	            <a href="/about"><img src="images/casa4.jpg" class="img-fluid" width="450" height="200" alt="Casa de Tobias"></a>
+	          </div>
+	          <div class="col-sm-2 col-md-6 col-lg-6 coltest">
+							<br><br>
+	            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casa de Tobias Resort is a lush hidden paradise in Laguna that lets you get away
+								from all the deafening hustle and bustle of the city without having to go far from Manila.
+								A nature-friendly resort where you can experience waking up
+								in a place where you first glimpse of the day is the beautiful scenery that boasts the perfect natural environment.
+								The environment feels natural. As you stroll around the place,
+								you can hear nature sounds—water stream, wind blowing the trees, feathered creatures chirping.
+								<a href="/about">(See more.)</a>
+	            </p>
+	          </div>
+	        </div>
+      	</div>
       </div>
     </div>
   </article>
   <div class="container-fluid">
-    <h2>Rooms and Amenitshits</h2>
-    <p>This is the Rooms and Amenishits</p>
+    <a href="/gallery"><h2>Casa de Tobias Gallery</h2></a>
+    <p>Check inside of the Casa de Tobias Mountain Resort. Casa de Tobias Mountain Resort is a place where one can take a break from the beach party crowd and rediscover the joys of being close to nature.
+			Our resort is located in the Alibungbungan, Nagcarlan, Laguna, is a quiet retreat for guests looking for tranquility and exclusivity.
+			Privacy is at its loveliest here at Casa de Tobias Mountain Resort.
+
+			Our range of accommodations and facilities make us the ideal resort not only for couples on a romantic holiday, but also for large groups and long-stay guests, as well as for people who are looking for picturesque venues for weddings, birthdays, meetings and other special events.
+
+		</p>
     <div class="row">
       <div class="col-sm-4 center">
           <img src="images/casa1.jpg" class="img-responsive img-thumbnail" alt="Casa de Tobias">
       </div>
       <div class="col-sm-4 center">
-          <img src="images/casa2.jpg" class="img-responsive img-thumbnail" alt="Casa de Tobias">
+          <img src="images/casa2.2.jpg" class="img-responsive img-thumbnail" alt="Casa de Tobias">
       </div>
       <div class="col-sm-4 center">
           <img src="images/casa3.jpg" class="img-responsive img-thumbnail" alt="Casa de Tobias">

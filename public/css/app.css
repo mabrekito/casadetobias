@@ -12285,6 +12285,10 @@ nav {
   height: 100%;
 }
 
+.carousel-inner a {
+  color: black;
+}
+
 /**jumbotron Mugs**/
 
 .gallery-intro {
@@ -12292,9 +12296,32 @@ nav {
   background-color: #f3f3f3;
 }
 
+.about-intro {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.about-intro .jumbotron {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px 15px;
+}
+
+.about-style {
+  font-size: 20px;
+  font-style: verdana;
+}
+
 .gallery-intro .jumbotron {
   padding: 15px 15px;
   margin: 0px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-image: url("/images/footerimg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12483,5 +12510,9 @@ img.hover-shadow {
 .close-modal.cursor:after {
   content: "";
   display: table;
+}
+
+h2 {
+  color: black;
 }
 
