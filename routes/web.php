@@ -64,9 +64,11 @@ Route::get('/invoice', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/register', function () {
-    return view('register');
+
+Route::get('/zerostep', function () {
+    return view('/zerostep');
 });
+
 Route::get('/roomadmin', function () {
     return view('roomadmin');
 });
@@ -77,7 +79,17 @@ Route::get('/useracc', function () {
     return view('useracc');
 });
 
+// Route::get('/register', function () {
+//     return view('register');
+// });
+
+Route::get('/register', 'loginController@getData');
+Route::post('/register/submit', 'loginController@Submit');
+
 Route::post('/reservation/booking/summary', 'BookingsController@submit');
+
+route::get('/reservation/zerostep', 'reservationController@getData');
+route::post('/reservation/zerostep', 'reservationController@sessionDate');
 
 /* For testing codes */
 Route::get('/test',function(){

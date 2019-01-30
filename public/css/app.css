@@ -8007,7 +8007,7 @@ a.close.disabled {
   left: 15%;
   z-index: 10;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 130px;
   color: #fff;
   text-align: center;
 }
@@ -12266,18 +12266,10 @@ nav {
 /* Carousel */
 
 .carousel-caption h1 {
-  font-size: 500%;
+  font-size: 350%;
   text-transform: uppercase;
   text-shadow: 1px 1px 15px #000;
-  color: blue;
-}
-
-.carousel-caption h3 {
-  font-size: 200%;
-  font-weight: 500;
-  align: left;
-  text-shadow: 1px 1px 10px #000;
-  padding-bottom: 1rem;
+  color: gold;
 }
 
 .carousel-inner img {
@@ -12286,7 +12278,7 @@ nav {
 }
 
 .carousel-inner a {
-  color: black;
+  color: gray;
 }
 
 /**jumbotron Mugs**/
@@ -12515,4 +12507,3 @@ img.hover-shadow {
 h2 {
   color: black;
 }
-

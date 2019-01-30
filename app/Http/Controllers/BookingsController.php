@@ -13,6 +13,7 @@ class BookingsController extends Controller
             'firstName' => 'required',
             'lastName' => 'required',
             'phoneNumber' => 'required',
+            
 
         ]);
         // Creating Booking Record

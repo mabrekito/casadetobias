@@ -11,17 +11,31 @@
           <img class="casa" src="images/homepagecasa2.jpg">
           <div class="carousel-caption">
             <h1 class="display-1">Casa De Tobias</h1>
-            <h3>Thesis Website Layout</h3>
-            <a href="/about"><button type="button" class="btn btn-secondary btn-lg">THE RESORT</a>
+            <h3>A Refreshing Resort in Nagcarlan, Laguna</h3>
+            <a href="/about"><button type="button" class="btn btn-secondary btn-md btn-ls btn-lg">THE RESORT</a>
             </button>
-            <a href="/reservation/zerostep"><button type="button" class="btn btn-primary btn-lg">BOOK A ROOM</button></a>
+            <a href="/reservation/zerostep"><button type="button" class="btn btn-primary btn-md btn-ls btn-lg">BOOK A ROOM</button></a>
           </div>
         </div>
         <div class="carousel-item">
           <img src="images/casa2.1.jpg">
+					<div class="carousel-caption">
+            <h1 class="display-1">Perfect for Family Outings and Barkada Bondings</h1>
+            <h3>Enjoying the Amenities of Casa de Tobias</h3>
+            <a href="/about"><button type="button" class="btn btn-secondary btn-md btn-ls btn-lg">THE RESORT</a>
+            </button>
+            <a href="/reservation/zerostep"><button type="button" class="btn btn-primary btn-md btn-ls btn-lg">BOOK A ROOM</button></a>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="images/casabanner3.jpg">
+					<div class="carousel-caption">
+            <h1 class="display-1">So what are you waiting for?</h1>
+            <h3>Book Now!</h3>
+            <a href="/about"><button type="button" class="btn btn-secondary btn-md btn-ls btn-lg">THE RESORT</a>
+            </button>
+            <a href="/reservation/zerostep"><button type="button" class="btn btn-primary btn-md btn-ls btn-lg">BOOK A ROOM</button></a>
+          </div>
         </div>
       </div>
     </div>

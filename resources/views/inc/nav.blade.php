@@ -29,7 +29,7 @@
                             <div class="date-label">Check Out</div>
                             <div class="date-placeholder"></div>
                             <div class="date-values" id="dateTo1">
-                                <div class="date-d">{{\Carbon\Carbon::now('+08:00')->day}}</div>
+                                <div class="date-d"><span>{{\Carbon\Carbon::now('+08:00')->day}}</span></div>
                                 <div class="date-my"><span class="date-m">{{\Carbon\Carbon::now('+08:00')->shortEnglishMonth}}</span>, <span class="date-y">{{\Carbon\Carbon::now('+08:00')->year}}</span></div>
                             </div>
                         </div>
