@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+
+	<link rel="stylesheet" href="{{asset('frontEnd')}}css/bootstrap-datepicker.css">
 <div class="main-content">
 
 </div>
@@ -52,6 +55,8 @@
   		            </form>
 </div>
 
+
+<script src="{{asset('frontEnd')}}/js/bootstrap-datepicker.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
@@ -64,4 +69,5 @@
   $( "#datecheckout" ).datepicker();
   } );
 </script>
+
 @endsection

@@ -34,41 +34,59 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <div class="login-logo">
-      <a href="/login"><img src="images/mini-logo.jpg" width="30%"></a>
+      <a href="/login"><img src="/images/mini-logo.jpg" width="30%"></a>
     </div>
     <p class="login-box-msg">Register</p>
-    <form action="../../index2.html" method="post">
+
+    @if(\Session::has ('success'))
+      <div class="alert alert-success">
+        <p>{{\success::get('success')}}</p>
+      </div>
+    @endif
+    <!-- <form method="post" action="{{url('login')}}"> -->
+    {!! Form::open(['url' => '/register/submit']) !!}
       <div class="form-group has-feedback">
-        <input type="first" class="form-control" name="first" placeholder="Firstname" required>
+        <!-- <input type="first" class="form-control" name="firstName" placeholder="Firstname" required> -->
+        {{Form::text('firstName', '',['class'=> 'form-control has-feedback','placeholder' => 'Enter First Name'])}}
         <span class="glyphicon glyphicon-equalizer form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="last" class="form-control" name="last" placeholder="Lastname" required>
+        {{Form::text('lastName', '',['class'=> 'form-control','placeholder' => 'Enter Last Name'])}}
+        <!-- <input type="last" class="form-control" name="lastName" placeholder="Lastname" required> -->
         <span class="glyphicon glyphicon-equalizer form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="address" class="form-control" name="email" placeholder="Address" required>
+        <!-- <input type="address" class="form-control" name="address" placeholder="Address" required> -->
+        {{Form::text('address', '',['class'=> 'form-control','placeholder' => 'Enter Address'])}}
         <span class="glyphicon glyphicon-home form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="Email">
+        <!-- <input type="email" class="form-control" name="email" placeholder="Email"> -->
+        {{Form::text('email', '',['class'=> 'form-control','placeholder' => 'Enter email'])}}
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="uid" placeholder="Username" required>
+        <!-- <input type="text" class="form-control" name="username" placeholder="Username" required> -->
+        {{Form::text('username', '',['class'=> 'form-control','placeholder' => 'Enter username'])}}
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="pass" placeholder="Password" required>
+        <!-- <input type="password" class="form-control" name="password" placeholder="Password" required> -->
+        {{Form::text('password', '',['class'=> 'form-control','placeholder' => 'Enter password'])}}
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="radio" name="type" value="Admin" required/> Admin <input type="radio" name="type" value="Receptionist"/> Receptionist
+        <input type="radio" name="userType" value="Admin" required/> Admin <input type="radio" name="type" value="Receptionist"/> Receptionist
       </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          {{Form::submit('Submit',['class'=> 'btn btn-primary'])}}
         </div>
-    </form>
+    <!-- </form> -->
+    {!! Form::close() !!}
+
+  </div>
+</div>
+
 
   </div>
   <!-- /.login-box-body -->

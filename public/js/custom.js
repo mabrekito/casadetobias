@@ -60,7 +60,7 @@ function dateSelectFrom() {
         var dateFormat = "mm/dd/yy",
             from = $( "#datepickerFrom1" )
                 .datepicker({
-                    minDate: 0,
+                    minDate: +3,
                     changeMonth: true,
                 })
                 .on( "change", function() {
@@ -71,6 +71,7 @@ function dateSelectFrom() {
                         day  = date.getDate(),
                         month = Date.shortMonths[date.getMonth()],
                         year =  date.getFullYear();
+
                     document.getElementsByClassName('date-d')[0].innerHTML = day.toString();
                     document.getElementsByClassName('date-m')[0].innerHTML = month.toString();
                     document.getElementsByClassName('date-y')[0].innerHTML = year.toString();
